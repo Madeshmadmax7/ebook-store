@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/Money.css';
+import Navbar from './Navbar';
 
 const Money = ({ cartItems = [] }) => {  
   const [formData, setFormData] = useState({
@@ -26,6 +27,7 @@ const Money = ({ cartItems = [] }) => {
 
   return (
     <div className="mno-container">
+      <Navbar/>
       <div className="mno-cart-items">
         <h3>Selected Books</h3>
         {cartItems.length === 0 ? (

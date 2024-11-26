@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
-import Navbar from './components/Navbar';
 import Gallery from './components/Gallery';
 import Cart from './components/Cart';
 import Money from './components/Money';
@@ -32,9 +31,8 @@ function App() {
   return (
     <Router>
       <div className="app">
-        <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/ebook-store" element={<Home />} />
           <Route path="/gallery" element={<Gallery addToCart={addToCart} />} />
           <Route path="/cart" element={<Cart cartItems={cartItems} updateCart={updateCart} />} />
           <Route path="/money" element={<Money cartItems={cartItems} />} />

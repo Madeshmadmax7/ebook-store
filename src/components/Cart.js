@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; 
 import '../styles/Cart.css';
+import Navbar from './Navbar';
 
 const Cart = ({ cartItems, updateCart }) => {
   const [totalPrice, setTotalPrice] = useState(0);
@@ -27,6 +28,7 @@ const Cart = ({ cartItems, updateCart }) => {
 
   return (
     <div className="cart-container">
+      <Navbar/>
       <h2 className="cart-header">Your Cart</h2>
       <div className="cart-total">
         <p><strong>Total: ${totalPrice}</strong></p>

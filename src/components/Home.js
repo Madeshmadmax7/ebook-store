@@ -35,6 +35,7 @@ function Home() {
 
   return (
     <div className="App">
+      <Navbar/>
       <div className="section white-section">
         <Navbar navbarClass={navbarClass} />
         <WhiteSection />

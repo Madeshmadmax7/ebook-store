@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import '../styles/Gallery.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartPlus, faShoppingBag } from '@fortawesome/free-solid-svg-icons';
+import Navbar from './Navbar';
 
 
 const books = [
@@ -109,6 +110,7 @@ const Gallery = ({ addToCart }) => {
 
   return (
     <div className="gallery-container">
+      <Navbar/>
       <h2>Book Gallery</h2>
       <div className="card-container">
         {books.map((book, index) => (

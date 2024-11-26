@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/BlackSection.css';
+import Navbar from './Navbar';
 
 function BlackSection() {
   const books = [
@@ -31,6 +32,7 @@ function BlackSection() {
 
   return (
     <div className="black-section-content">
+      <Navbar/>
       <h2>Top Picks from Our Collection</h2>
       <div className="card-container">
         {books.map((book, index) => (
