@@ -29,7 +29,7 @@ function App() {
   }, [cartItems]);
 
   return (
-    <Router>
+    <Router basename="/ebook-store">
       <div className="app">
         <Routes>
           <Route path="/ebook-store" element={<Home />} />
