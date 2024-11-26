@@ -1,0 +1,84 @@
+.gallery-container{
+  text-align: center;
+  font-size: 1.6rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.black-section-content {
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .black-section-content h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background-color: #222;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .book-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 15px;
+  }
+  
+  .card-content h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+  }
+  
+  .card-content p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+  }
+  
+  .card-icons {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.card-icons i {
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #ffffff;
+    justify-content: space-around;
+    transition: color 0.3s ease;
+  }
+  
+  .card-icons i:hover {
+    color: #0056b3;
+  }
+  
