@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 
 const Cart = ({ cartItems, updateCart }) => {
   const [totalPrice, setTotalPrice] = useState(0);
-  
+
   useEffect(() => {
     const total = cartItems.reduce((sum, item) => {
       const price = item.price;
@@ -16,19 +16,17 @@ const Cart = ({ cartItems, updateCart }) => {
     }, 0);
     setTotalPrice(total.toFixed(2));
   }, [cartItems]);
-  
 
   const removeItem = (index) => {
     const newCart = [...cartItems];
-    newCart.splice(index, 1); 
-    updateCart(newCart); 
-    console.log("Updated cart after removal:", newCart); 
+    newCart.splice(index, 1);
+    updateCart(newCart);
     localStorage.setItem('cart', JSON.stringify(newCart));
   };
 
   return (
     <div className="cart-container">
-      <Navbar/>
+      <Navbar />
       <h2 className="cart-header">Your Cart</h2>
       <div className="cart-total">
         <p><strong>Total: ${totalPrice}</strong></p>
@@ -38,9 +36,9 @@ const Cart = ({ cartItems, updateCart }) => {
       ) : (
         <div className="cart-items">
           {cartItems.map((item, index) => (
-            <div className="cart-item small-card" key={index}>
+            <div className="cart-item small-card" key={item.id}>
               <div className="cart-item-details">
-                <img src={item.image} alt={item.title} className="cart-item-image" />
+                <img src={`${process.env.PUBLIC_URL}${item.image}`} alt={item.title} className="cart-item-image" />
                 <div className="cart-item-text">
                   <h4>{item.title}</h4>
                   <p><strong>Author:</strong> {item.author}</p>
@@ -58,9 +56,8 @@ const Cart = ({ cartItems, updateCart }) => {
       )}
       {cartItems.length > 0 && (
         <Link to="/money" className="checkout-button">
-        Proceed to Checkout
-      </Link>
-      
+          Proceed to Checkout
+        </Link>
       )}
     </div>
   );

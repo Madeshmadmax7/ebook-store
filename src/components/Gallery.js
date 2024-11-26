@@ -5,9 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartPlus, faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 import Navbar from './Navbar';
 
-
 const books = [
   {
+    id:1,
     title: "The Great Gatsby",
     author: "F. Scott Fitzgerald",
     genre: "Classic Fiction",
@@ -16,6 +16,7 @@ const books = [
     image: "/img/GreatGatsby.jpg",
   },
   {
+    id:2,
     title: "1984",
     author: "George Orwell",
     genre: "Dystopian",
@@ -23,7 +24,8 @@ const books = [
     description: "A dystopian novel that explores surveillance and freedom.",
     image: "/img/1984.jpg",
   },
-  {
+  {    id:3,
+
     title: "To Kill a Mockingbird",
     author: "Harper Lee",
     genre: "Historical Fiction",
@@ -31,7 +33,8 @@ const books = [
     description: "A powerful story of justice and morality in the Deep South.",
     image: "/img/tokillamockingbird.jpg",
   },
-  {
+  {    id:4,
+
     title: "A Man Called Ove",
     author: "Fredrik Backman",
     genre: "Contemporary Fiction",
@@ -39,7 +42,8 @@ const books = [
     description: "A story of a grumpy but lovable man.",
     image: "/img/Amancalledove.jpg",
   },
-  {
+  {    id:5,
+
     title: "The Fortune Men",
     author: "Nadifa Mohamed",
     genre: "Literary Fiction",
@@ -47,7 +51,8 @@ const books = [
     description: "A gripping novel of injustice and hope.",
     image: "/img/slider2_1.jpg",
   },
-  {
+  {    id:6,
+
     title: "Good and Evil",
     author: "Various",
     genre: "Philosophy",
@@ -55,7 +60,8 @@ const books = [
     description: "A thought-provoking take on morality.",
     image: "/img/slider2_2.jpg",
   },
-  {
+  {    id:7,
+
     title: "Oliver Sacks",
     author: "Oliver Sacks",
     genre: "Memoir",
@@ -63,7 +69,8 @@ const books = [
     description: "A memoir by the celebrated neurologist.",
     image: "/img/slider2_3.jpg",
   },
-  {
+  {    id:8,
+
     title: "The Art of Happiness",
     author: "Dalai Lama",
     genre: "Self-Help",
@@ -71,7 +78,8 @@ const books = [
     description: "Insights on life and joy.",
     image: "/img/slider2_4.jpg",
   },
-  {
+  {    id:9,
+
     title: "A Man's Greatest Challenge",
     author: "Various",
     genre: "Self-Improvement",
@@ -79,7 +87,8 @@ const books = [
     description: "A guide to self-discovery and growth.",
     image: "/img/slider2_5.jpg",
   },
-  {
+  {    id:10,
+
     title: "The Wealth of Nations",
     author: "Adam Smith",
     genre: "Economics",
@@ -87,7 +96,8 @@ const books = [
     description: "A classic on economics and society.",
     image: "/img/slider2_6.jpg",
   },
-  {
+  {    id:11,
+
     title: "Thinking Fast and Slow",
     author: "Daniel Kahneman",
     genre: "Psychology",
@@ -95,7 +105,8 @@ const books = [
     description: "Exploring the mind's dual systems of thought.",
     image: "/img/slider2_7.jpg",
   },
-  {
+  {    id:12,
+
     title: "The Way of Men",
     author: "Jack Donovan",
     genre: "Cultural Studies",
@@ -110,12 +121,12 @@ const Gallery = ({ addToCart }) => {
 
   return (
     <div className="gallery-container">
-      <Navbar/>
+      <Navbar />
       <h2>Book Gallery</h2>
       <div className="card-container">
-        {books.map((book, index) => (
-          <div className="card" key={index}>
-            <img src={book.image} alt={book.title} className="book-image" />
+        {books.map((book) => (
+          <div className="card" key={book.id}>
+            <img src={`${process.env.PUBLIC_URL}${book.image}`} alt={book.title} className="book-image" />
             <div className="card-content">
               <h3>{book.title}</h3>
               <p><strong>Author:</strong> {book.author}</p>
@@ -126,13 +137,13 @@ const Gallery = ({ addToCart }) => {
                 <FontAwesomeIcon
                   icon={faCartPlus}
                   title="Add to Cart"
-                  onClick={() => addToCart(book)}
+                  onClick={() => addToCart(book)} 
                 />
                 <FontAwesomeIcon
                   icon={faShoppingBag}
                   title="Buy Now"
-                  onClick={() => { addToCart(book); navigate('/money'); }}
-                  />
+                  onClick={() => { addToCart(book); navigate('/money'); }} 
+                />
               </div>
             </div>
           </div>
@@ -143,4 +154,3 @@ const Gallery = ({ addToCart }) => {
 };
 
 export default Gallery;
-

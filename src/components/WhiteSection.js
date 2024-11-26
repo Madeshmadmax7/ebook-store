@@ -23,7 +23,8 @@ function WhiteSection() {
         <ul>
           {duplicatedImages.map((src, index) => (
             <li key={index} style={{ "--index": index + 1 }}>
-              <img src={src} alt={`Slider ${index + 1}`} />
+              {/* Update the image path to start from the root */}
+              <img src={`${process.env.PUBLIC_URL}${src}`} alt={`Slider ${index + 1}`} />
             </li>
           ))}
         </ul>

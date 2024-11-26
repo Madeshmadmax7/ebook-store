@@ -27,7 +27,7 @@ const Money = ({ cartItems = [] }) => {
 
   return (
     <div className="mno-container">
-      <Navbar/>
+      <Navbar />
       <div className="mno-cart-items">
         <h3>Selected Books</h3>
         {cartItems.length === 0 ? (
@@ -36,7 +36,11 @@ const Money = ({ cartItems = [] }) => {
           <div className="mno-cart-list">
             {cartItems.map((item, index) => (
               <div className="mno-cart-item" key={index}>
-                <img src={item.image} alt={item.title} className="mno-item-image" />
+                <img 
+                  src={`${process.env.PUBLIC_URL}${item.image}`} 
+                  alt={item.title} 
+                  className="mno-item-image" 
+                />
                 <div>
                   <h4>{item.title}</h4>
                   <p><strong>Author:</strong> {item.author}</p>

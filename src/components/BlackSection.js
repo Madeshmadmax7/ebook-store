@@ -37,7 +37,7 @@ function BlackSection() {
       <div className="card-container">
         {books.map((book, index) => (
           <div className="card" key={index}>
-            <img src={book.image} alt={book.title} className="book-image" />
+            <img src={`${process.env.PUBLIC_URL}${book.image}`} alt={book.title} className="book-image" />
             <div className="card-content">
               <h3>{book.title}</h3>
               <p><strong>Author:</strong> {book.author}</p>
