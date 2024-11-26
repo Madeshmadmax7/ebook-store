@@ -2,6 +2,37 @@ import React, { useState } from 'react';
 import '../styles/Money.css';
 import Navbar from './Navbar';
 
+import GreatGatsby from '../img/GreatGatsby.jpg';
+import NineteenEightyFour from '../img/1984.jpg';
+import ToKillAMockingbird from '../img/tokillamockingbird.jpg';
+import AManCalledOve from '../img/Amancalledove.jpg';
+import FortuneMen from '../img/slider2_1.jpg';
+import GoodAndEvil from '../img/slider2_2.jpg';
+import OliverSacks from '../img/slider2_3.jpg';
+import ArtOfHappiness from '../img/slider2_4.jpg';
+import GreatestChallenge from '../img/slider2_5.jpg';
+import WealthOfNations from '../img/slider2_6.jpg';
+import ThinkingFastAndSlow from '../img/slider2_7.jpg';
+import WayOfMen from '../img/slider2_8.jpg';
+
+const getBookImageById = (id) => {
+  const images = {
+    1: GreatGatsby,
+    2: NineteenEightyFour,
+    3: ToKillAMockingbird,
+    4: AManCalledOve,
+    5: FortuneMen,
+    6: GoodAndEvil,
+    7: OliverSacks,
+    8: ArtOfHappiness,
+    9: GreatestChallenge,
+    10: WealthOfNations,
+    11: ThinkingFastAndSlow,
+    12: WayOfMen,
+  };
+  return images[id] || null;
+};
+
 const Money = ({ cartItems = [] }) => {  
   const [formData, setFormData] = useState({
     address: '',
@@ -28,29 +59,34 @@ const Money = ({ cartItems = [] }) => {
   return (
     <div className="mno-container">
       <Navbar />
+
       <div className="mno-cart-items">
         <h3>Selected Books</h3>
         {cartItems.length === 0 ? (
           <p>Your cart is empty.</p>
         ) : (
           <div className="mno-cart-list">
-            {cartItems.map((item, index) => (
-              <div className="mno-cart-item" key={index}>
-                <img 
-                  src={`${process.env.PUBLIC_URL}${item.image}`} 
-                  alt={item.title} 
-                  className="mno-item-image" 
-                />
-                <div>
-                  <h4>{item.title}</h4>
-                  <p><strong>Author:</strong> {item.author}</p>
-                  <p><strong>Price:</strong> {item.price}</p>
+            {cartItems.map((item, index) => {
+              const bookImage = getBookImageById(item.id);  // Get the image based on the book ID
+              return (
+                <div className="mno-cart-item" key={index}>
+                  <img 
+                    src={bookImage}  // Use the dynamically fetched image
+                    alt={item.title} 
+                    className="mno-item-image" 
+                  />
+                  <div>
+                    <h4>{item.title}</h4>
+                    <p><strong>Author:</strong> {item.author}</p>
+                    <p><strong>Price:</strong> {item.price}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         )}
       </div>
+
       <form className="mno-form">
         <h3>Shipping Details</h3>
         <input
@@ -89,6 +125,7 @@ const Money = ({ cartItems = [] }) => {
           Confirm Order
         </button>
       </form>
+
       {orderPlaced && (
         <div className="mno-popup">
           <h3>Order Placed Successfully!</h3>
