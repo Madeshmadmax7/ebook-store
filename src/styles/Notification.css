@@ -1,0 +1,74 @@
+/* Notifications.css */
+
+
+  
+  .xyz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  .xyz-content {
+    animation: fadeIn 1.2s ease-in-out;
+  }
+  
+  .xyz-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: black; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .xyz-box {
+    background: rgba(255, 255, 255, 0.1); 
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    display: inline-block;
+  }
+  
+  .xyz-message {
+    font-size: 18px;
+    color: black;
+    font-style: italic;
+    opacity: 0.8;
+    animation: slideUp 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .xyz-title {
+      font-size: 28px;
+    }
+    .xyz-message {
+      font-size: 16px;
+    }
+  }
+  

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import '../styles/Money.css';
 import Navbar from './Navbar';
-
+import '../styles/Money.css';
 import GreatGatsby from '../img/GreatGatsby.jpg';
 import NineteenEightyFour from '../img/1984.jpg';
 import ToKillAMockingbird from '../img/tokillamockingbird.jpg';
@@ -33,7 +32,7 @@ const getBookImageById = (id) => {
   return images[id] || null;
 };
 
-const Money = ({ cartItems = [] }) => {  
+const Money = ({ cartItems = [] }) => {
   const [formData, setFormData] = useState({
     address: '',
     city: '',
@@ -67,11 +66,11 @@ const Money = ({ cartItems = [] }) => {
         ) : (
           <div className="mno-cart-list">
             {cartItems.map((item, index) => {
-              const bookImage = getBookImageById(item.id);  // Get the image based on the book ID
+              const bookImage = getBookImageById(item.id); 
               return (
                 <div className="mno-cart-item" key={index}>
                   <img 
-                    src={bookImage}  // Use the dynamically fetched image
+                    src={bookImage} 
                     alt={item.title} 
                     className="mno-item-image" 
                   />
@@ -131,6 +130,13 @@ const Money = ({ cartItems = [] }) => {
           <h3>Order Placed Successfully!</h3>
           <p>Your order will be shipped to:</p>
           <p>{formData.address}, {formData.city}, {formData.state} - {formData.pincode}</p>
+          <div className="entered-details">
+            <h4>Entered Details:</h4>
+            <p><strong>Address:</strong> {formData.address}</p>
+            <p><strong>City:</strong> {formData.city}</p>
+            <p><strong>State:</strong> {formData.state}</p>
+            <p><strong>Pincode:</strong> {formData.pincode}</p>
+          </div>
           <button className="mno-close-btn" onClick={() => setOrderPlaced(false)}>
             Close
           </button>
