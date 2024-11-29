@@ -1,21 +1,34 @@
 {
   "files": {
-    "main.css": "/ebook-store/static/css/main.9ef90ced.css",
-    "main.js": "/ebook-store/static/js/main.95559f85.js",
+    "main.css": "/ebook-store/static/css/main.31a0d6f5.css",
+    "main.js": "/ebook-store/static/js/main.4d19e89f.js",
     "static/media/fa-solid-900.ttf": "/ebook-store/static/media/fa-solid-900.ad1782c70927ebc5bc87.ttf",
+    "static/media/img3.jpg": "/ebook-store/static/media/img3.9556249111cb5d52f91c.jpg",
     "static/media/fa-brands-400.ttf": "/ebook-store/static/media/fa-brands-400.26b80c8830bebf340211.ttf",
     "static/media/fa-solid-900.woff2": "/ebook-store/static/media/fa-solid-900.83a538a018a9e44b023a.woff2",
     "static/media/fa-brands-400.woff2": "/ebook-store/static/media/fa-brands-400.fdbb558523a380307689.woff2",
     "static/media/fa-regular-400.ttf": "/ebook-store/static/media/fa-regular-400.05fdd87be89f7f8f0a1e.ttf",
+    "static/media/Amancalledove.jpg": "/ebook-store/static/media/Amancalledove.54f5a147a918c2846423.jpg",
+    "static/media/slider2_6.jpg": "/ebook-store/static/media/slider2_6.9429327986f5c36963be.jpg",
+    "static/media/GreatGatsby.jpg": "/ebook-store/static/media/GreatGatsby.a079f8a9ab7ae7d191c9.jpg",
+    "static/media/slider2_8.jpg": "/ebook-store/static/media/slider2_8.56fbed096ce6a0125f30.jpg",
+    "static/media/tokillamockingbird.jpg": "/ebook-store/static/media/tokillamockingbird.9ac860e06f78902a2ec1.jpg",
+    "static/media/slider2_2.jpg": "/ebook-store/static/media/slider2_2.def65e7c1461ae915063.jpg",
+    "static/media/slider2_4.jpg": "/ebook-store/static/media/slider2_4.33a88aa2c4c9872c1e17.jpg",
+    "static/media/slider2_1.jpg": "/ebook-store/static/media/slider2_1.a9c741b7a5956ec1648f.jpg",
+    "static/media/1984.jpg": "/ebook-store/static/media/1984.552bbf095ad25aab979b.jpg",
     "static/media/fa-regular-400.woff2": "/ebook-store/static/media/fa-regular-400.4f6a2dabee9c092d09b9.woff2",
+    "static/media/slider2_7.jpg": "/ebook-store/static/media/slider2_7.5c120efb103294d63586.jpg",
+    "static/media/slider2_5.jpg": "/ebook-store/static/media/slider2_5.603cd276287738262903.jpg",
+    "static/media/slider2_3.jpg": "/ebook-store/static/media/slider2_3.42dee59a1b3c3fbfe228.jpg",
     "static/media/fa-v4compatibility.ttf": "/ebook-store/static/media/fa-v4compatibility.fa86b3c85e77abbd2ebd.ttf",
     "static/media/fa-v4compatibility.woff2": "/ebook-store/static/media/fa-v4compatibility.c3ea317a0f10f201597f.woff2",
     "index.html": "/ebook-store/index.html",
-    "main.9ef90ced.css.map": "/ebook-store/static/css/main.9ef90ced.css.map",
-    "main.95559f85.js.map": "/ebook-store/static/js/main.95559f85.js.map"
+    "main.31a0d6f5.css.map": "/ebook-store/static/css/main.31a0d6f5.css.map",
+    "main.4d19e89f.js.map": "/ebook-store/static/js/main.4d19e89f.js.map"
   },
   "entrypoints": [
-    "static/css/main.9ef90ced.css",
-    "static/js/main.95559f85.js"
+    "static/css/main.31a0d6f5.css",
+    "static/js/main.4d19e89f.js"
   ]
 }
